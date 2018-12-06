@@ -18,9 +18,9 @@ module.exports = {
             if(codigoSolicitud.valor==1){
                 let mailOptions = {
                     from: '"Oscar Gutierrez" <oscar.vidasoft@gmail.com>', // sender address
-                    to: 'carlosnoelg3@gmail.com', // list of receivers
+                    to: 'carlosnoelg3@gmail.com,alxgutierrez08@gmail.com', // list of receivers
                     subject: 'Su solicitud a sido aprobada', // Subject line
-                    html: `<b>Su demanda de codigo: ${codigoSolicitud} se le ha asignado un presentante legal</b>` // html body
+                    html: `<b>Su demanda de codigo: ${codigoSolicitud.Id} se le ha asignado un presentante legal</b>` // html body
                 };
             
                 // send mail with defined transport object
@@ -37,7 +37,7 @@ module.exports = {
                     from: '"Oscar Gutierrez" <oscar.vidasoft@gmail.com>', // sender address
                     to: 'carlosnoelg3@gmail.com', // list of receivers
                     subject: 'Su solicitud a sido desaprobada', // Subject line
-                    html: `<b>La demanda de codigo: ${codigoSolicitud} a sido denegada ya que no hemos encontrado un representante legal acorde al cliente</b>` // html body
+                    html: `<b>La demanda de codigo: ${codigoSolicitud.Id} a sido denegada ya que no hemos encontrado un representante legal acorde al cliente</b>` // html body
                 };
             
                 // send mail with defined transport object
